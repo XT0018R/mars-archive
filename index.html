@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- 缓存自修复：微信内置浏览器会硬缓存首页 HTML，导致手机端一直显示旧版。
+     每次发布改 BUILD 号，手机打开带 ?build= 的新链接即强制刷新，之后自动保持最新。 -->
+<script>
+(function(){try{var B='20260812bt';var k='mars-build';if(localStorage.getItem(k)!==B){localStorage.setItem(k,B);var u=new URL(location.href);if(u.searchParams.get('build')!==B){u.searchParams.set('build',B);location.replace(u.pathname+u.search);}}}catch(e){}})();
+</script>
+<title>火星档案馆 · MARS ARCHIVE｜华晨宇演唱会全纪录</title>
+<meta name="description" content="华晨宇火星演唱会 2014—2026 全场次档案：时间、地点、场馆、形式、歌单与官方影像，附全国足迹地图与歌迷个人观演记录。">
+<!-- 微信分享卡片：粘贴链接时在微信里显示为「火星档案馆」标题 + 封面图 + 描述的卡片，点卡片即进网站 -->
+<meta property="og:title" content="火星档案馆 · MARS ARCHIVE">
+<meta property="og:description" content="华晨宇火星演唱会 2014—2026 全纪录，与全国火星人共享现场照片与火星故事。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://5966ceecaa0b444fb37ea88387032610.gz4.agentos-app.net/mars-og-1x1.png">
+<meta property="og:url" content="https://5966ceecaa0b444fb37ea88387032610.gz4.agentos-app.net/">
+<meta property="og:site_name" content="火星档案馆 MARS ARCHIVE">
+<meta name="weixin:title" content="火星档案馆 · MARS ARCHIVE">
+<meta name="weixin:image" content="https://5966ceecaa0b444fb37ea88387032610.gz4.agentos-app.net/mars-og-1x1.png">
+<meta name="weixin:desc" content="华晨宇火星演唱会 2014—2026 全纪录，与全国火星人共享现场照片与火星故事。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=24">
+
+<!-- 年份导航样式内联（v3修复：窄屏 bottom 用硬编码像素值，不再依赖外部CSS变量 --hud-h） -->
+<style id="yearnav-inline">
+.yearnav{position:fixed;left:clamp(6px,0.9vw,16px);top:50%;transform:translateY(-50%);z-index:120;
+  --yn-h:30px;height:calc(var(--yn-h) * 5);overflow-y:auto;overflow-x:hidden;
+  scrollbar-width:none;-ms-overflow-style:none;
+  opacity:0;visibility:hidden;
+  transition:opacity .5s ease,visibility .5s}
+.yearnav::-webkit-scrollbar{display:none}
+.yearnav.show{opacity:1;visibility:visible}
+.yn-list{display:flex;flex-direction:column;align-items:flex-start;
+  transform:none!important;transition:none;will-change:auto;padding-block:calc(var(--yn-h) * 2)}
+.yn-item{height:var(--yn-h);display:flex;align-items:center;gap:8px;background:none;border:0;cursor:pointer;
+  padding:0;color:#888;font-family:system-ui,-apple-system,sans-serif;white-space:nowrap;transition:color .35s}
+.yn-item .yn-dot{position:relative;z-index:1;width:8px;height:8px;border-radius:50%;flex:none;
+  background:#222;border:1.5px solid #444;transition:all .35s}
+.yn-item .yn-yr{font-size:11px;letter-spacing:.06em;font-variant-numeric:tabular-nums;opacity:.5;transition:all .35s}
+.yn-item:hover{color:#ccc}
+.yn-item:hover .yn-dot{border-color:#c44}
+.yn-item:hover .yn-yr{opacity:1}
+.yn-item.active{color:#FF2D3A}
+.yn-item.active .yn-dot{background:#FF2D3A;border-color:#FF2D3A;box-shadow:0 0 9px rgba(255,45,58,.55);transform:scale(1.15)}
+.yn-item.active .yn-yr{font-size:13px;font-weight:600;opacity:1}
+@media (max-width:1100px){
+  .yearnav{left:50%;top:auto;bottom:70px;transform:translateX(-50%);
+    display:flex;flex-direction:row;height:auto;width:180px;overflow-x:auto;overflow-y:hidden;
+    scrollbar-width:none;-ms-overflow-style:none;
+    padding:8px 0;border:0!important;border-radius:0;background:transparent!important;
+    box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .yearnav::-webkit-scrollbar{display:none}
+  .yn-list{flex-direction:row;align-items:center;transform:none!important;transition:none;gap:0;padding-inline:calc(50% - 30px);padding-block:0}
+  .yn-item{height:auto;flex-direction:column;gap:4px;padding:0;width:60px;flex:0 0 60px}
+  .yn-item .yn-dot{width:7px;height:7px}
+  .yn-item .yn-yr{font-size:11px;opacity:.5;color:#cfcfcf}
+  .yn-item.active .yn-yr{font-size:13px;opacity:1;color:#FF2D3A}
+}
+</style>
+
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<!-- ============ 左侧年份跳转导航 ============ -->
+<nav class="yearnav" id="yearnav" aria-label="年份跳转"></nav>
+
+<!-- ============ HUD ============ -->
+<div class="hud">
+  <div class="hud-row">
+    <div class="hud-cell">
+      <a class="brand" href="#" onclick="return App.go('timeline')">
+        <i class="brand-mark"></i>
+        <span>
+          <span class="brand-name">火星档案馆</span>
+          <span class="brand-sub" style="display:block;margin-top:3px">Mars Archive</span>
+        </span>
+      </a>
+    </div>
+    <div class="hud-cell c">
+      <div class="hud-tag">2014 — 2026 · <b id="hudTotal">87</b> shows · <b id="hudProv">20</b> provinces</div>
+    </div>
+    <div class="hud-cell r">
+      <div class="counter">
+        <svg width="15" height="15" viewBox="0 0 15 15">
+          <circle cx="7.5" cy="7.5" r="6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="1.6"/>
+          <circle id="ring" cx="7.5" cy="7.5" r="6" fill="none" stroke="#FF2D3A" stroke-width="1.6"
+                  stroke-dasharray="37.7" stroke-dashoffset="37.7" transform="rotate(-90 7.5 7.5)"
+                  style="transition:stroke-dashoffset .8s cubic-bezier(.16,1,.3,1)"/>
+        </svg>
+        <span class="lbl">我去过</span><span class="val" id="hudWent">0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hud-row">
+    <div class="hud-cell">
+      <nav class="nav">
+        <button class="nav-item on" data-view="timeline">时间轴<span class="en">Timeline</span></button>
+        <button class="nav-item" data-view="map">足迹地图<span class="en">Map</span></button>
+        <button class="nav-item" data-view="wall">回忆墙<span class="en">Wall</span></button>
+        <button class="nav-item" data-view="mine">我的火星<span class="en">Mine</span></button>
+      </nav>
+    </div>
+    <div class="hud-cell c"><div class="hud-hint">点击任意场次查看档案</div></div>
+    <div class="hud-cell r"><div class="hud-hint" id="hudClock">—</div></div>
+  </div>
+</div>
+
+<!-- ============ 视图 ============ -->
+<main class="stage">
+
+  <!-- 时间轴 -->
+  <section class="view on" id="view-timeline">
+    <div class="wrap">
+      <div class="hero">
+        <div class="hero-kicker">Hua Chenyu · Mars Concert Archive</div>
+        <h1 class="hero-title">MARS<br><em>ARCHIVE</em></h1>
+        <div class="hero-cn">火星档案馆</div>
+        <p class="hero-desc">
+          从 2014 年 9 月 6 日的第一声开场，到一座座城市里亮起的星环舞台。
+          这里记录华晨宇每一次火星演唱会的时间、落点、舞台形态与现场歌单——
+          每一场，都是一次「欢迎回家」。
+        </p>
+        <div class="hero-stats">
+          <div class="stat"><div class="n" id="s1">0<i>场</i></div><div class="l">Total Shows</div></div>
+          <div class="stat"><div class="n" id="s2">0<i>城</i></div><div class="l">Cities</div></div>
+          <div class="stat"><div class="n" id="s3">0<i>省</i></div><div class="l">Provinces</div></div>
+          <div class="stat"><div class="n" id="s4">0<i>年</i></div><div class="l">Years</div></div>
+        </div>
+        <div class="scroll-cue"><span></span>Scroll to explore</div>
+      </div>
+
+      <div id="chapters"></div>
+
+      <footer class="foot">
+        <p><b>素材来源声明</b>　本站所有影像与图片仅采用以下官方来源：华晨宇本人、华晨宇工作室、火星演唱会官方账号（微博 / 小红书 / 抖音 / 哔哩哔哩）。非官方来源的图片与视频一律不予收录。</p>
+        <p><b>数据说明</b>　场次信息整理自公开报道与官方公告，如有出入以官方发布为准。歌单持续补录中。</p>
+        <p><b>隐私说明</b>　你标记的观演记录与上传的照片仅保存在本机浏览器（localStorage），不会上传到任何服务器，清除浏览器数据即会消失。</p>
+        <p style="margin-top:14px;color:var(--txt-4)">非官方歌迷向存档站点 · 不含任何商业用途</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 地图 -->
+  <section class="view" id="view-map">
+    <div class="wrap">
+      <div class="map-head">
+        <div>
+          <h2 class="sec-title">足迹<em>地图</em></h2>
+          <p class="sec-sub">颜色越深，代表火星演唱会在该省级行政区落地的场次越多。点击省份或榜单可查看详情。</p>
+          <div class="map-mine" id="mapMine"></div>
+        </div>
+        <div class="map-ctrl">
+          <button class="map-toggle" id="toggleMine">只看我的足迹</button>
+        </div>
+      </div>
+
+      <div class="map-layout">
+        <div class="map-shell">
+          <div id="tmap"></div>
+          <div class="map-loading" id="mapLoading">
+            <div>
+              <div class="spin"></div>
+              <p>正在绘制行政区边界</p>
+            </div>
+          </div>
+          <div class="legend">
+            <h4>场次密度</h4>
+            <div class="legend-scale" id="legendScale"></div>
+            <div class="legend-row"><span class="legend-lb">少</span>
+              <span style="flex:1"></span><span class="legend-lb">多</span></div>
+            <div class="legend-row legend-mine"><span class="legend-dot"></span><span class="legend-lb">我去过的省份（圆点数字＝去了几次）</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="rank">
+            <div class="rank-h"><span>省级行政区</span><span id="rankTotal"></span></div>
+            <div class="rank-list" id="rankList"></div>
+          </div>
+          <div class="unvisited">
+            <h4>尚未到达</h4>
+            <div class="tags" id="unvisitedTags"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prov-drill" id="provDrill">
+        <div class="pd-empty">点击地图上的省份或榜单，查看该省每座城市的演出场次</div>
+      </div>
+
+      <footer class="foot">
+        <p>省界与南海诸岛依据标准行政区划数据绘制，含台湾省、香港特别行政区、澳门特别行政区及南海诸岛。颜色越深代表该省级行政区落地的场次越多。</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 我的火星 -->
+  <section class="view" id="view-mine">
+    <div class="wrap">
+      <div class="mine-head">
+        <h2 class="sec-title">我的<em>火星</em></h2>
+        <p class="sec-sub">标记你去过的每一场，上传属于你的现场照片。所有记录只存在你自己的浏览器里。</p>
+      </div>
+      <div id="mineBody"></div>
+      <footer class="foot">
+        <p><b>提示</b>　照片保存在本机浏览器，建议定期使用「导出我的档案」备份。更换设备或清理浏览器数据后可用备份文件恢复。</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- 回忆墙 -->
+  <section class="view" id="view-wall">
+    <div class="wrap">
+      <div class="mine-head">
+        <h2 class="sec-title">火星<em>回忆墙</em></h2>
+        <p class="sec-sub">所有火星人共享的现场——「我去过」与现场照，默认只在你本机，只有你主动点「共享」才会出现在这里。</p>
+      </div>
+      <div id="wallBody"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 详情浮层 -->
+<div class="sheet" id="sheet">
+  <div class="sheet-bg" onclick="App.closeSheet()"></div>
+  <div class="sheet-panel"><div class="sheet-inner" id="sheetInner"></div></div>
+</div>
+
+<!-- 照片放大浮层 -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-bg" onclick="App.closeLightbox()"></div>
+  <button class="lb-back" onclick="App.closeLightbox()" aria-label="返回上一级">← 返回</button>
+  <img class="lb-img" id="lbImg" src="" alt="现场照片">
+</div>
+
+<!-- 火星小故事弹窗 -->
+<div class="modal" id="storyModal">
+  <div class="modal-bg" onclick="App.closeStoryModal()"></div>
+  <div class="modal-panel">
+    <div class="modal-head">
+      <div class="modal-title">写一段火星小故事</div>
+      <button class="modal-x" onclick="App.closeStoryModal()" aria-label="关闭">×</button>
+    </div>
+    <p class="modal-sub">可以关联某场演唱会，也可以写一段不绑定场次的心情随笔。关联场次的故事会显示在对应场次下；开启共享后所有人都能在回忆墙看到。</p>
+    <label class="modal-field">
+      <span>关联场次（可选）</span>
+      <select id="storyShow" class="modal-select"></select>
+    </label>
+    <textarea id="storyText" class="modal-textarea" rows="6" placeholder="散场后那片被能量棒点亮的火海、对面挥舞的灯牌、某句突然击中你的歌词……写下属于你的火星瞬间。"></textarea>
+    <div class="modal-actions">
+      <button class="modal-cancel" onclick="App.closeStoryModal()">取消</button>
+      <button class="modal-save" id="storyModalSave" onclick="App.saveWallStory()">保存到回忆墙</button>
+    </div>
+    <div class="modal-hint" id="storyModalHint"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<input type="file" id="fileInput" accept="image/*" multiple hidden>
+
+<script src="js/data.js?v=34"></script>
+<script src="js/store.js"></script>
+<script src="js/config.js"></script>
+<script src="js/backend.js?v=6"></script>
+<script src="js/china-geo.js"></script>
+<script src="js/wall-data.js?v=21"></script>
+<script src="js/app.v5.js?v=47"></script>
+<script src="js/map.js?v=6"></script>
+</body>
+</html>

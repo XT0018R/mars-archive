@@ -1,0 +1,41 @@
+# ===== 版权内容（明星现场照，不随仓库分发） =====
+looks/
+
+# ===== 备份 / 研究过程产物（非产品本体） =====
+_looks*/
+looks_v6_backup/
+looks_v7_backup/
+_cand_v3/
+_geo_src/
+_live_data_recovery.js
+_test_order.js
+_valid_looks_mapping.json
+
+# ===== 部署产物（含线上密钥，不公开） =====
+dist/
+
+# ===== 本地管理 / 诊断工具（含硬编码密钥） =====
+admin/
+tools/
+
+# ===== 依赖 =====
+node_modules/
+
+# ===== 临时数据转储 =====
+att_full.json
+ph_full.json
+ph_now.json
+*.bak
+*.bak*
+
+# ===== 个人作品集文档（非产品本体，含面试材料） =====
+PRD-*.html
+PRD-*.docx
+功能架构图-*.html
+流程图-*.html
+火星档案馆-产品架构.xmind
+case-study-portfolio.md
+
+# ===== 系统 / 编辑器 =====
+.DS_Store
+Thumbs.db
