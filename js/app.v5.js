@@ -1229,3 +1229,6 @@ const App = (() => {
 
   return { go, openSheet, closeSheet, openLightbox, closeLightbox, setWent, exportData, importData, toast, renderMine, renderWall, toggleShare, toggleSharePhoto, openStoryModal: openWallStoryModal, closeStoryModal, saveWallStory };
 })();
+// 离线小工具：minitool-bootstrap.js 的 data-act 委托依赖 window.App；
+// 顶层 const App 不会挂到 window，这里显式暴露，否则所有 data-act 按钮（返回/×/导出/导入）失效。
+window.App = App;
