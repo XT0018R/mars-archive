@@ -207,7 +207,8 @@ const MarsMap = (() => {
     if (tmapEl) tmapEl.classList.toggle('only-mine', onlyMine);
     svg.querySelectorAll('.province').forEach(p => {
       const name = p.dataset.name;
-      p.classList.toggle('mine', onlyMine && vis.has(name));
+      p.classList.toggle('visited', vis.has(name));            // 本人到过：常驻金色描边（标记后立即可见）
+      p.classList.toggle('mine', onlyMine && vis.has(name));   // 只看我的足迹：整块点亮
     });
     let g = svg.querySelector('.mine-badges');
     if (!g) {
@@ -215,15 +216,12 @@ const MarsMap = (() => {
       g.setAttribute('class', 'mine-badges');
       svg.appendChild(g);
     }
-    if (onlyMine) {
-      g.innerHTML = [...vis.entries()].map(([name, c]) => {
-        const c0 = centroids[name];
-        if (!c0) return '';
-        return `<text class="mine-badge" x="${c0.x.toFixed(3)}" y="${(c0.y + 0.014).toFixed(3)}">${c}</text>`;
-      }).join('');
-    } else {
-      g.innerHTML = '';
-    }
+    // 本人到过的省份，始终在地图上标注场次数量（标记后立即可见，无需切到"只看我的足迹"）
+    g.innerHTML = [...vis.entries()].map(([name, c]) => {
+      const c0 = centroids[name];
+      if (!c0) return '';
+      return `<text class="mine-badge" x="${c0.x.toFixed(3)}" y="${(c0.y + 0.014).toFixed(3)}">${c}</text>`;
+    }).join('');
   }
 
   function renderMineBox() {
