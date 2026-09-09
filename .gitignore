@@ -31,10 +31,19 @@ ph_now.json
 # ===== 个人作品集文档（非产品本体，含面试材料） =====
 PRD-*.html
 PRD-*.docx
+PRD-*.md
 功能架构图-*.html
 流程图-*.html
 火星档案馆-产品架构.xmind
+*.xmind
 case-study-portfolio.md
+用户旅程与原型.html
+数据指标与复盘.html
+AI应用说明.html
+用户旅程与原型.md
+数据指标与复盘.md
+AI应用说明.md
+火星档案馆-简历素材.md
 
 # ===== 系统 / 编辑器 =====
 .DS_Store
