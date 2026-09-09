@@ -709,7 +709,7 @@ const App = (() => {
           if (t) { t.classList.add('on'); t.textContent = '☉　已共享到回忆墙'; }
         }
         syncShareBtn(id, true);
-      } catch (e) { toast('共享失败：' + (e.message || e)); }
+      } catch (e) { toast('已存本机 ☉ 云端暂不可达，网络恢复后打开回忆墙会自动补传'); }
     } else {
       toast('从回忆墙撤下…');
       try {
