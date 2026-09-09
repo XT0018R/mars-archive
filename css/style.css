@@ -334,6 +334,7 @@ body{
 .map-toggle:hover{border-color:var(--red-mid);color:#fff}
 .map-toggle.on{background:#ffd24a;border-color:#ffd24a;color:#1a0e00;font-weight:600;box-shadow:0 4px 16px rgba(255,210,74,.3)}
 /* 只看我的足迹：去过省份变黄高亮，未去省份淡化 */
+.province.visited{stroke:#ffd24a;stroke-width:.0065;stroke-opacity:.95}  /* 本人到过：常驻金色描边，默认即同步 */
 .province.mine{fill:#ffd24a;stroke:rgba(255,210,74,.9);stroke-width:.006}
 #tmap.only-mine .province:not(.mine){opacity:.16}
 .mine-badge{font-family:var(--font-serif);font-size:.029px;font-weight:700;fill:#1a0e00;text-anchor:middle;dominant-baseline:middle;paint-order:stroke;stroke:rgba(255,255,255,.85);stroke-width:.005}
